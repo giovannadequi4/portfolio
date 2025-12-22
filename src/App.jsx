@@ -289,7 +289,7 @@ function App() {
                   link: "https://github.com/giovannadequi4/real-estate-project"
                 },
                 {
-                  title: "Emplyee Take-Home Test",
+                  title: "Take-Home Test",
                   description: "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
                   tags: ["React", "Java", "Spring Security", "JWT", "Argon2"], 
                   gradient: "from-emerald-500/20 to-pink-500/20",
