@@ -109,16 +109,16 @@ function App() {
               className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 animate-fade-in-up leading-tight"
               style={{ animationDelay: "0.4s", opacity: 0 }}
             >
-              <span className="gradient-text">Desenvolvedor</span>
+              <span className="gradient-text">Giovanna</span>
               <br />
-              <span className="gradient-text-pink">Full-Stack</span>
+              <span className="gradient-text-pink">Brocker</span>
             </h1>
 
             <p
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4"
               style={{ animationDelay: "0.6s", opacity: 0 }}
             >
-              Criando experiências digitais modernas com código limpo, design pensado e atenção aos detalhes
+              Desenvolvedora Full-Stack Java, C# e React TS
             </p>
 
             <div
@@ -146,7 +146,7 @@ function App() {
               style={{ animationDelay: "1s", opacity: 0 }}
             >
               <a
-                href="https://github.com"
+                href="https://github.com/giovannadequi4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass hover-glow p-2.5 md:p-3 rounded-full transition-all"
@@ -154,7 +154,7 @@ function App() {
                 <GithubIcon />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/giovanna-dequi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass hover-glow p-2.5 md:p-3 rounded-full transition-all"
@@ -179,27 +179,26 @@ function App() {
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
-                    Desenvolvedor full-stack com formação técnica e superior completa, com experiência em empresas reais
+                    Desenvolvedora Full-Stack com formação técnica e nível superior em andamento, com experiência em empresas
                     e projetos independentes.
                   </p>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    Apaixonado por criar interfaces modernas com animações suaves e experiências memoráveis. Busco
-                    constantemente aprender novas tecnologias e melhorar minhas habilidades.
+                    Criando experiências digitais modernas com código limpo, design pensado e atenção aos detalhes
                   </p>
                 </div>
 
                 <div className="space-y-3 md:space-y-4">
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
                     <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">🎓 Formação</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Técnico + Ensino Superior completo</p>
+                    <p className="text-gray-400 text-sm md:text-base">Técnico + Ensino Superior em andamento</p>
                   </div>
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
                     <h3 className="font-semibold text-pink-400 mb-1 md:mb-2 text-sm md:text-base">💼 Experiência</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Empresas reais + Projetos freelance</p>
+                    <p className="text-gray-400 text-sm md:text-base">Desenvolvedora full stack + Projetos robustos</p>
                   </div>
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
                     <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">🎨 Foco</h3>
-                    <p className="text-gray-400 text-sm md:text-base">UI moderna, animações e polish visual</p>
+                    <p className="text-gray-400 text-sm md:text-base">Design e arquitetura de software</p>
                   </div>
                 </div>
               </div>
@@ -221,7 +220,7 @@ function App() {
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
                 <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Frontend</h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS", "JavaScript"].map((skill) => (
+                  {["React", "TypeScript", "HTML/CSS", "JavaScript"].map((skill) => (
                     <span
                       key={skill}
                       className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
@@ -235,7 +234,7 @@ function App() {
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
                 <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-4 md:mb-6">Backend</h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"].map((skill) => (
+                  {["Java", "Spring Framework", "C#", ".NET", "SQL", "REST APIs"].map((skill) => (
                     <span
                       key={skill}
                       className="skill-badge-pink px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
@@ -249,7 +248,7 @@ function App() {
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
                 <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Ferramentas</h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["Git", "Docker", "Figma", "VS Code", "Vercel", "AWS"].map((skill) => (
+                  {["MQTT", "Git", "Docker", "Figma", "Scrum"].map((skill) => (
                     <span
                       key={skill}
                       className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
@@ -273,32 +272,30 @@ function App() {
               <h2 className="text-2xl md:text-4xl font-bold gradient-text">Projetos em Destaque</h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+            <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               {[
                 {
-                  title: "E-commerce Platform",
-                  description: "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin",
-                  tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
+                  title: "Sales Sync",
+                  description: "Sistema desenvolvido para administração de vendas e controle de estoque, utilizado por uma loja real.",
+                  tags: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
                   gradient: "from-emerald-500/20 to-emerald-600/20",
+                  link: "https://github.com/giovannadequi4/sales-sync-project"
                 },
                 {
-                  title: "Social Dashboard",
-                  description: "Dashboard de analytics com gráficos interativos e dados em tempo real",
-                  tags: ["Next.js", "TypeScript", "Chart.js", "WebSocket"],
+                  title: "Real Estate Platform",
+                  description: "Sistema web desenvolvido para gerenciamento de imóveis com interface intuitiva e responsiva, funcionalidades robustas e autenticação de usuários. ",
+                  tags: ["PHP", "JavaScript", "Bootstrap", "MySQL"],
                   gradient: "from-pink-500/20 to-pink-600/20",
+                  link: "https://github.com/giovannadequi4/real-estate-project"
                 },
                 {
-                  title: "Task Management App",
-                  description: "Aplicativo de gerenciamento de tarefas com drag & drop e colaboração",
-                  tags: ["React", "Firebase", "Tailwind", "DnD Kit"],
+                  title: "Emplyee Take-Home Test",
+                  description: "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
+                  tags: ["React", "Java", "Spring Security", "JWT", "Argon2"], 
                   gradient: "from-emerald-500/20 to-pink-500/20",
+                  link: "https://github.com/giovannadequi4/login-spring-react"
                 },
-                {
-                  title: "AI Chat Assistant",
-                  description: "Assistente virtual com IA para atendimento automatizado",
-                  tags: ["React", "OpenAI", "Express", "MongoDB"],
-                  gradient: "from-pink-500/20 to-emerald-500/20",
-                },
+
               ].map((project, index) => (
                 <div
                   key={index}
@@ -322,13 +319,16 @@ function App() {
                     ))}
                   </div>
                   <div className="mt-4 md:mt-6 flex gap-3">
-                    <button className="text-sm flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
+                    {/* <button className="text-sm flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
                       Ver Demo
                       <ExternalLinkIcon />
-                    </button>
-                    <button className="text-sm flex items-center gap-1.5 text-pink-400 hover:text-pink-300 transition-colors font-medium">
+                    </button> */}
+                    <button
+                      className="text-sm flex items-center gap-1.5 text-pink-400 hover:text-pink-300 transition-colors font-medium"
+                      onClick={() => window.open(project.link, '_blank')}
+                    >  
                       <GithubIcon />
-                      Código
+                      Ver mais
                     </button>
                   </div>
                 </div>
@@ -350,30 +350,30 @@ function App() {
             <div className="space-y-6 md:space-y-8">
               {[
                 {
-                  role: "Desenvolvedor Full-Stack",
-                  company: "Tech Company",
-                  period: "2023 - Presente",
-                  description: "Desenvolvimento de aplicações web modernas usando React, Node.js e PostgreSQL",
+                  role: "Desenvolvedora Java/C# + React",
+                  company: "Duett Software",
+                  period: "08/2025 - Presente",
+                  description: "Atuação como desenvolvedora de software em projetos corporativos, envolvendo migração de sistema legado em Java e o desenvolvimento de novos sistemas B2B e de gestão de inventários em C#, com foco em regras de negócio logísticas, manutenção e evolução de sistemas existentes, implementação de funcionalidades backend e colaboração em equipe.",
                   color: "emerald",
                 },
                 {
-                  role: "Desenvolvedor Frontend",
-                  company: "Startup Inc",
-                  period: "2021 - 2023",
-                  description: "Criação de interfaces responsivas e animações usando React e Tailwind CSS",
+                  role: "Desenvolvedora Java + React",
+                  company: "IFSul",
+                  period: "2024 - 2025",
+                  description: " Desenvolvimento de sistema de análise de qualidade de máquinas, com React.js no frontend (prototipado e implementado) integrado a APIs REST em Java/Spring. Implementação de gráficos interativos e atualização em tempo real via MQTT. Utilização de práticas ágeis e Docker para otimização do ambiente.",
                   color: "pink",
                 },
                 {
-                  role: "Desenvolvedor Junior",
-                  company: "Digital Agency",
-                  period: "2020 - 2021",
-                  description: "Manutenção e desenvolvimento de websites institucionais e landing pages",
+                  role: "Desenvolvedora PHP",
+                  company: "Salutaris",
+                  period: "2024 - 2025",
+                  description: "Desenvolvimento de sistemas para gestão de operadoras de saúde em PHP e JavaScript. Geração de relatórios, otimização de consultas SQL complexas e gerenciamento de banco de dados relacional. Atendimento a demandas via tickets, garantindo entregas ágeis e de qualidade.",
                   color: "emerald",
                 },
               ].map((exp, index) => (
                 <div
                   key={index}
-                  className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift relative pl-8 md:pl-12 timeline-item"
+                  className="rounded-xl md:rounded-2xl p-6 md:p-8 relative pl-8 md:pl-12 timeline-item"
                 >
                   <div
                     className={`absolute left-0 top-8 md:top-10 w-3 h-3 rounded-full bg-${exp.color}-500 shadow-lg shadow-${exp.color}-500/50`}
@@ -404,20 +404,19 @@ function App() {
               </div>
 
               <p className="text-base md:text-lg text-gray-400 mb-8 md:mb-12 leading-relaxed">
-                Estou sempre aberto a novos projetos e oportunidades interessantes. Entre em contato e vamos criar algo
-                incrível juntos!
+                Entre em contato!
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <a
-                  href="mailto:seu@email.com"
+                  href="mailto:giovanna.dequi@gmail.com"
                   className="btn-gradient px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-white flex items-center gap-2 justify-center text-sm md:text-base"
                 >
                   <MailIcon />
                   Enviar Email
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/giovanna-dequi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gradient-pink px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-white flex items-center gap-2 justify-center text-sm md:text-base"

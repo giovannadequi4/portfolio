@@ -170,7 +170,7 @@ export default function Page() {
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
-                    Desenvolvedor full-stack com formação técnica e superior completa, com experiência em empresas reais
+                    Desenvolvedora Full-Stack com formação técnica e superior completa, com experiência em empresas reais
                     e projetos independentes.
                   </p>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed">
@@ -341,21 +341,21 @@ export default function Page() {
             <div className="space-y-6 md:space-y-8">
               {[
                 {
-                  role: "Desenvolvedor Full-Stack",
+                  role: "Desenvolvedora Full-Stack",
                   company: "Tech Company",
                   period: "2023 - Presente",
                   description: "Desenvolvimento de aplicações web modernas usando React, Node.js e PostgreSQL",
                   color: "emerald",
                 },
                 {
-                  role: "Desenvolvedor Frontend",
+                  role: "Desenvolvedora Frontend",
                   company: "Startup Inc",
                   period: "2021 - 2023",
                   description: "Criação de interfaces responsivas e animações usando React e Tailwind CSS",
                   color: "pink",
                 },
                 {
-                  role: "Desenvolvedor Junior",
+                  role: "Desenvolvedora Junior",
                   company: "Digital Agency",
                   period: "2020 - 2021",
                   description: "Manutenção e desenvolvimento de websites institucionais e landing pages",

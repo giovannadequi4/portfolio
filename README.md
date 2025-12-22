@@ -1,6 +1,6 @@
 # Portfolio React + Vite
 
-Portfolio moderno de desenvolvedor full-stack construído com React, Vite e Tailwind CSS.
+Portfolio moderno de Desenvolvedora Full-Stack construído com React, Vite e Tailwind CSS.
 
 ## Recursos
 
