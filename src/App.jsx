@@ -118,7 +118,7 @@ function App() {
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4"
               style={{ animationDelay: "0.6s", opacity: 0 }}
             >
-              Desenvolvedora Full-Stack Java, C# e React TS
+              Desenvolvedora Full-Stack Java, C# e React
             </p>
 
             <div
@@ -183,7 +183,7 @@ function App() {
                     e projetos independentes.
                   </p>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    Criando experiências digitais modernas com código limpo, design pensado e atenção aos detalhes
+                    Criando experiências digitais modernas com código limpo e atenção aos detalhes.
                   </p>
                 </div>
 
