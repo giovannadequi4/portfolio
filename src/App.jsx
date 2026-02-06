@@ -248,7 +248,7 @@ function App() {
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
                 <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Ferramentas</h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["MQTT", "Git", "Docker", "Figma", "Scrum"].map((skill) => (
+                  {["MQTT", "Git", "RabbitMQ", "OCELOT", "Docker", "Figma", "Scrum"].map((skill) => (
                     <span
                       key={skill}
                       className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
@@ -275,6 +275,13 @@ function App() {
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               {[
                 {
+                  title: "Take-Home Test",
+                  description: "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
+                  tags: ["React", "Java", "Spring Security", "JWT", "Argon2"], 
+                  gradient: "from-emerald-500/20 to-pink-500/20",
+                  link: "https://github.com/giovannadequi4/login-spring-react"
+                },
+                {
                   title: "Sales Sync",
                   description: "Sistema desenvolvido para administração de vendas e controle de estoque, utilizado por uma loja real.",
                   tags: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
@@ -287,13 +294,6 @@ function App() {
                   tags: ["PHP", "JavaScript", "Bootstrap", "MySQL"],
                   gradient: "from-pink-500/20 to-pink-600/20",
                   link: "https://github.com/giovannadequi4/real-estate-project"
-                },
-                {
-                  title: "Take-Home Test",
-                  description: "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
-                  tags: ["React", "Java", "Spring Security", "JWT", "Argon2"], 
-                  gradient: "from-emerald-500/20 to-pink-500/20",
-                  link: "https://github.com/giovannadequi4/login-spring-react"
                 },
 
               ].map((project, index) => (
