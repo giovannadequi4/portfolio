@@ -275,6 +275,12 @@ function App() {
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               {[
                 {
+                  title: "CineMood AI",
+                  description: "Uma aplicação que recebe um texto sobre como você está se sentindo e retorna recomendações de filmes alinhadas ao seu humor. A interpretação é feita com LLM, e os resultados são validados com dados reais da API do TMDB. O foco foi estruturar como um projeto de produção: separação clara de responsabilidades, centralização de configurações, tratamento consistente de erros e integração real entre serviços externos.",
+                  tags: ["LLM", "API externa", "Engenharia de Prompt", "Tratamento de erros"],
+                  link: "https://github.com/giovannadequi4/cinemood"
+                }
+                {
                   title: "Take-Home Test",
                   description: "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
                   tags: ["React", "Java", "Spring Security", "JWT", "Argon2"], 
