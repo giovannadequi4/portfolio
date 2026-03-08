@@ -1,34 +1,6 @@
 # Portfolio React + Vite
 
-Portfolio moderno de Desenvolvedora Full-Stack construído com React, Vite e Tailwind CSS.
-
-## Recursos
-
-- Design mobile-first responsivo
-- Efeitos gloss e animações suaves
-- Gradientes harmônicos verde + rosa
-- Orbs flutuantes animados
-- Navegação smooth scroll
-- Componentes interativos com hover effects
-
-## Instalação
-
-\`\`\`bash
-# Instalar dependências
-npm install
-
-# Rodar em desenvolvimento
-npm run dev
-
-# Build para produção
-npm run build
-
-# Preview da build
-npm run preview
-\`\`\`
-
-## Tecnologias
-
+Portfolio construído com as tecnologias:
 - React 18
 - Vite
 - Tailwind CSS
@@ -36,7 +8,7 @@ npm run preview
 
 ## Estrutura
 
-\`\`\`
+```
 src/
   ├── components/
   │   └── Icons.jsx
