@@ -194,8 +194,9 @@ function App() {
                     projetos independentes.
                   </p>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    Criando experiências digitais modernas com código limpo e
-                    atenção aos detalhes.
+                    Com foco em backend (Java + Spring), atuando na construção
+                    de sistemas robustos, integração de APIs e aplicações
+                    orientadas a dados.
                   </p>
                 </div>
 
@@ -216,14 +217,14 @@ function App() {
                       Desenvolvedora full stack + Projetos robustos
                     </p>
                   </div>
-                  <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
+                  {/* <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
                     <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
                       🎨 Foco
                     </h3>
                     <p className="text-gray-400 text-sm md:text-base">
                       Design e arquitetura de software
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
