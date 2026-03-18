@@ -1,29 +1,38 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Code, User, Briefcase, Mail, Github, Linkedin, ExternalLink, Sparkles } from "lucide-react"
+import { useState, useEffect } from "react";
+import {
+  Code,
+  User,
+  Briefcase,
+  Mail,
+  Github,
+  Linkedin,
+  ExternalLink,
+  Sparkles,
+} from "lucide-react";
 
 export default function Page() {
-  const [activeSection, setActiveSection] = useState("hero")
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
-      { threshold: 0.5 },
-    )
+      { threshold: 0.5 }
+    );
 
     document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -87,14 +96,17 @@ export default function Page() {
         </nav>
 
         {/* Hero Section - mobile-first */}
-        <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-6">
+        <section
+          id="hero"
+          className="min-h-screen flex items-center justify-center px-4 md:px-6"
+        >
           <div className="max-w-5xl mx-auto text-center">
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
+            {/* <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
               <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-6 md:mb-8">
                 <Sparkles className="w-4 h-4 md:w-5 md:h-5" />
                 <span className="text-xs md:text-sm font-medium gradient-text">Disponível para novos projetos</span>
               </div>
-            </div>
+            </div> */}
 
             <h1
               className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 animate-fade-in-up leading-tight"
@@ -109,7 +121,8 @@ export default function Page() {
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4"
               style={{ animationDelay: "0.6s", opacity: 0 }}
             >
-              Criando experiências digitais modernas com código limpo, design pensado e atenção aos detalhes
+              Criando experiências digitais modernas com código limpo, design
+              pensado e atenção aos detalhes
             </p>
 
             <div
@@ -164,33 +177,49 @@ export default function Page() {
                 <div className="p-2 md:p-3 bg-emerald-500/20 rounded-lg md:rounded-xl">
                   <User className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
-                <h2 className="text-2xl md:text-4xl font-bold gradient-text">Sobre Mim</h2>
+                <h2 className="text-2xl md:text-4xl font-bold gradient-text">
+                  Sobre Mim
+                </h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
-                    Desenvolvedora Full-Stack com formação técnica e superior completa, com experiência em empresas reais
-                    e projetos independentes.
+                    Desenvolvedora Full-Stack com formação técnica e superior
+                    completa, com experiência em empresas reais e projetos
+                    independentes.
                   </p>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    Apaixonado por criar interfaces modernas com animações suaves e experiências memoráveis. Busco
-                    constantemente aprender novas tecnologias e melhorar minhas habilidades.
+                    Apaixonado por criar interfaces modernas com animações
+                    suaves e experiências memoráveis. Busco constantemente
+                    aprender novas tecnologias e melhorar minhas habilidades.
                   </p>
                 </div>
 
                 <div className="space-y-3 md:space-y-4">
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">🎓 Formação</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Técnico + Ensino Superior completo</p>
+                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
+                      🎓 Formação
+                    </h3>
+                    <p className="text-gray-400 text-sm md:text-base">
+                      Técnico + Ensino Superior completo
+                    </p>
                   </div>
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-pink-400 mb-1 md:mb-2 text-sm md:text-base">💼 Experiência</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Empresas reais + Projetos freelance</p>
+                    <h3 className="font-semibold text-pink-400 mb-1 md:mb-2 text-sm md:text-base">
+                      💼 Experiência
+                    </h3>
+                    <p className="text-gray-400 text-sm md:text-base">
+                      Empresas reais + Projetos freelance
+                    </p>
                   </div>
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">🎨 Foco</h3>
-                    <p className="text-gray-400 text-sm md:text-base">UI moderna, animações e polish visual</p>
+                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
+                      🎨 Foco
+                    </h3>
+                    <p className="text-gray-400 text-sm md:text-base">
+                      UI moderna, animações e polish visual
+                    </p>
                   </div>
                 </div>
               </div>
@@ -205,14 +234,25 @@ export default function Page() {
               <div className="p-2 md:p-3 bg-pink-500/20 rounded-lg md:rounded-xl">
                 <Code className="w-5 h-5 md:w-6 md:h-6" />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">Skills & Tecnologias</h2>
+              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">
+                Skills & Tecnologias
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Frontend</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">
+                  Frontend
+                </h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS", "JavaScript"].map((skill) => (
+                  {[
+                    "React",
+                    "TypeScript",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "HTML/CSS",
+                    "JavaScript",
+                  ].map((skill) => (
                     <span
                       key={skill}
                       className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
@@ -224,9 +264,18 @@ export default function Page() {
               </div>
 
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-4 md:mb-6">Backend</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-4 md:mb-6">
+                  Backend
+                </h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"].map((skill) => (
+                  {[
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "MongoDB",
+                    "REST APIs",
+                    "GraphQL",
+                  ].map((skill) => (
                     <span
                       key={skill}
                       className="skill-badge-pink px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
@@ -238,16 +287,20 @@ export default function Page() {
               </div>
 
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Ferramentas</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">
+                  Ferramentas
+                </h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["Git", "Docker", "Figma", "VS Code", "Vercel", "AWS"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {["Git", "Docker", "Figma", "VS Code", "Vercel", "AWS"].map(
+                    (skill) => (
+                      <span
+                        key={skill}
+                        className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
+                      >
+                        {skill}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -261,32 +314,38 @@ export default function Page() {
               <div className="p-2 md:p-3 bg-emerald-500/20 rounded-lg md:rounded-xl">
                 <Briefcase className="w-5 h-5 md:w-6 md:h-6" />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold gradient-text">Projetos em Destaque</h2>
+              <h2 className="text-2xl md:text-4xl font-bold gradient-text">
+                Projetos em Destaque
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               {[
                 {
                   title: "E-commerce Platform",
-                  description: "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin",
+                  description:
+                    "Plataforma completa de e-commerce com carrinho, pagamentos e painel admin",
                   tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
                   gradient: "from-emerald-500/20 to-emerald-600/20",
                 },
                 {
                   title: "Social Dashboard",
-                  description: "Dashboard de analytics com gráficos interativos e dados em tempo real",
+                  description:
+                    "Dashboard de analytics com gráficos interativos e dados em tempo real",
                   tags: ["Next.js", "TypeScript", "Chart.js", "WebSocket"],
                   gradient: "from-pink-500/20 to-pink-600/20",
                 },
                 {
                   title: "Task Management App",
-                  description: "Aplicativo de gerenciamento de tarefas com drag & drop e colaboração",
+                  description:
+                    "Aplicativo de gerenciamento de tarefas com drag & drop e colaboração",
                   tags: ["React", "Firebase", "Tailwind", "DnD Kit"],
                   gradient: "from-emerald-500/20 to-pink-500/20",
                 },
                 {
                   title: "AI Chat Assistant",
-                  description: "Assistente virtual com IA para atendimento automatizado",
+                  description:
+                    "Assistente virtual com IA para atendimento automatizado",
                   tags: ["React", "OpenAI", "Express", "MongoDB"],
                   gradient: "from-pink-500/20 to-emerald-500/20",
                 },
@@ -300,8 +359,12 @@ export default function Page() {
                   >
                     <Briefcase className="w-12 h-12 md:w-16 md:h-16 text-white/20" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{project.title}</h3>
-                  <p className="text-sm md:text-base text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-400 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
@@ -335,7 +398,9 @@ export default function Page() {
               <div className="p-2 md:p-3 bg-pink-500/20 rounded-lg md:rounded-xl">
                 <Briefcase className="w-5 h-5 md:w-6 md:h-6" />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">Experiência</h2>
+              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">
+                Experiência
+              </h2>
             </div>
 
             <div className="space-y-6 md:space-y-8">
@@ -344,21 +409,24 @@ export default function Page() {
                   role: "Desenvolvedora Full-Stack",
                   company: "Tech Company",
                   period: "2023 - Presente",
-                  description: "Desenvolvimento de aplicações web modernas usando React, Node.js e PostgreSQL",
+                  description:
+                    "Desenvolvimento de aplicações web modernas usando React, Node.js e PostgreSQL",
                   color: "emerald",
                 },
                 {
                   role: "Desenvolvedora Frontend",
                   company: "Startup Inc",
                   period: "2021 - 2023",
-                  description: "Criação de interfaces responsivas e animações usando React e Tailwind CSS",
+                  description:
+                    "Criação de interfaces responsivas e animações usando React e Tailwind CSS",
                   color: "pink",
                 },
                 {
                   role: "Desenvolvedora Junior",
                   company: "Digital Agency",
                   period: "2020 - 2021",
-                  description: "Manutenção e desenvolvimento de websites institucionais e landing pages",
+                  description:
+                    "Manutenção e desenvolvimento de websites institucionais e landing pages",
                   color: "emerald",
                 },
               ].map((exp, index) => (
@@ -374,17 +442,25 @@ export default function Page() {
                     } shadow-lg`}
                   />
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 md:mb-4">
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-0">{exp.role}</h3>
-                    <span className="text-xs md:text-sm text-gray-400">{exp.period}</span>
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-0">
+                      {exp.role}
+                    </h3>
+                    <span className="text-xs md:text-sm text-gray-400">
+                      {exp.period}
+                    </span>
                   </div>
                   <p
                     className={`text-sm md:text-base font-semibold ${
-                      exp.color === "emerald" ? "text-emerald-400" : "text-pink-400"
+                      exp.color === "emerald"
+                        ? "text-emerald-400"
+                        : "text-pink-400"
                     } mb-2 md:mb-3`}
                   >
                     {exp.company}
                   </p>
-                  <p className="text-sm md:text-base text-gray-400 leading-relaxed">{exp.description}</p>
+                  <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+                    {exp.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -399,12 +475,15 @@ export default function Page() {
                 <div className="p-2 md:p-3 bg-emerald-500/20 rounded-lg md:rounded-xl">
                   <Mail className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
-                <h2 className="text-2xl md:text-4xl font-bold gradient-text">Vamos Conversar?</h2>
+                <h2 className="text-2xl md:text-4xl font-bold gradient-text">
+                  Vamos Conversar?
+                </h2>
               </div>
 
               <p className="text-base md:text-lg text-gray-400 mb-8 md:mb-12 leading-relaxed">
-                Estou sempre aberto a novos projetos e oportunidades interessantes. Entre em contato e vamos criar algo
-                incrível juntos!
+                Estou sempre aberto a novos projetos e oportunidades
+                interessantes. Entre em contato e vamos criar algo incrível
+                juntos!
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
@@ -427,12 +506,14 @@ export default function Page() {
               </div>
 
               <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10">
-                <p className="text-xs md:text-sm text-gray-500">© 2025 - Todos os direitos reservados</p>
+                <p className="text-xs md:text-sm text-gray-500">
+                  © 2025 - Todos os direitos reservados
+                </p>
               </div>
             </div>
           </div>
         </section>
       </div>
     </>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import {
   CodeIcon,
   UserIcon,
@@ -10,29 +10,29 @@ import {
   LinkedinIcon,
   ExternalLinkIcon,
   SparklesIcon,
-} from "./components/Icons"
+} from "./components/Icons";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("hero")
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
+            setActiveSection(entry.target.id);
           }
-        })
+        });
       },
-      { threshold: 0.5 },
-    )
+      { threshold: 0.5 }
+    );
 
     document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -96,12 +96,20 @@ function App() {
         </nav>
 
         {/* Hero Section - mobile-first */}
-        <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-6">
+        <section
+          id="hero"
+          className="min-h-screen flex items-center justify-center px-4 md:px-6"
+        >
           <div className="max-w-5xl mx-auto text-center">
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
+            <div
+              className="animate-fade-in-up"
+              style={{ animationDelay: "0.2s", opacity: 0 }}
+            >
               <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-6 md:mb-8">
                 <SparklesIcon />
-                <span className="text-xs md:text-sm font-medium gradient-text">Disponível para novos projetos</span>
+                <span className="text-xs md:text-sm font-medium gradient-text">
+                  Disponível para novos projetos
+                </span>
               </div>
             </div>
 
@@ -118,7 +126,7 @@ function App() {
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4"
               style={{ animationDelay: "0.6s", opacity: 0 }}
             >
-              Desenvolvedora Full-Stack Java, C# e React
+              Desenvolvedora Full-Stack Java e React
             </p>
 
             <div
@@ -173,32 +181,48 @@ function App() {
                 <div className="p-2 md:p-3 bg-emerald-500/20 rounded-lg md:rounded-xl">
                   <UserIcon />
                 </div>
-                <h2 className="text-2xl md:text-4xl font-bold gradient-text">Sobre Mim</h2>
+                <h2 className="text-2xl md:text-4xl font-bold gradient-text">
+                  Sobre Mim
+                </h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
-                    Desenvolvedora Full-Stack com formação técnica e nível superior em andamento, com experiência em empresas
-                    e projetos independentes.
+                    Desenvolvedora Full-Stack com formação técnica e nível
+                    superior em andamento, com experiência em empresas e
+                    projetos independentes.
                   </p>
                   <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    Criando experiências digitais modernas com código limpo e atenção aos detalhes.
+                    Criando experiências digitais modernas com código limpo e
+                    atenção aos detalhes.
                   </p>
                 </div>
 
                 <div className="space-y-3 md:space-y-4">
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">🎓 Formação</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Técnico + Ensino Superior em andamento</p>
+                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
+                      🎓 Formação
+                    </h3>
+                    <p className="text-gray-400 text-sm md:text-base">
+                      Técnico + Ensino Superior em andamento
+                    </p>
                   </div>
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-pink-400 mb-1 md:mb-2 text-sm md:text-base">💼 Experiência</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Desenvolvedora full stack + Projetos robustos</p>
+                    <h3 className="font-semibold text-pink-400 mb-1 md:mb-2 text-sm md:text-base">
+                      💼 Experiência
+                    </h3>
+                    <p className="text-gray-400 text-sm md:text-base">
+                      Desenvolvedora full stack + Projetos robustos
+                    </p>
                   </div>
                   <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">🎨 Foco</h3>
-                    <p className="text-gray-400 text-sm md:text-base">Design e arquitetura de software</p>
+                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
+                      🎨 Foco
+                    </h3>
+                    <p className="text-gray-400 text-sm md:text-base">
+                      Design e arquitetura de software
+                    </p>
                   </div>
                 </div>
               </div>
@@ -213,49 +237,63 @@ function App() {
               <div className="p-2 md:p-3 bg-pink-500/20 rounded-lg md:rounded-xl">
                 <CodeIcon />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">Skills & Tecnologias</h2>
+              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">
+                Skills & Tecnologias
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Frontend</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">
+                  Frontend
+                </h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["React", "TypeScript", "HTML/CSS", "JavaScript"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {["React", "TypeScript", "HTML/CSS", "JavaScript"].map(
+                    (skill) => (
+                      <span
+                        key={skill}
+                        className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
+                      >
+                        {skill}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
 
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-4 md:mb-6">Backend</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-4 md:mb-6">
+                  Backend
+                </h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["Java", "Spring Framework", "C#", ".NET", "SQL", "REST APIs"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="skill-badge-pink px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {["Java", "Spring Framework", "SQL", "REST APIs"].map(
+                    (skill) => (
+                      <span
+                        key={skill}
+                        className="skill-badge-pink px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
+                      >
+                        {skill}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
 
               <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">Ferramentas</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">
+                  Ferramentas
+                </h3>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["MQTT", "Git", "RabbitMQ", "OCELOT", "Docker", "Figma", "Scrum"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {["MQTT", "Git", "RabbitMQ", "Docker", "Figma", "Scrum"].map(
+                    (skill) => (
+                      <span
+                        key={skill}
+                        className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
+                      >
+                        {skill}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -269,51 +307,58 @@ function App() {
               <div className="p-2 md:p-3 bg-emerald-500/20 rounded-lg md:rounded-xl">
                 <BriefcaseIcon />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold gradient-text">Projetos em Destaque</h2>
+              <h2 className="text-2xl md:text-4xl font-bold gradient-text">
+                Projetos em Destaque
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
               {[
                 {
                   title: "CineMood AI",
-                  description: "Uma aplicação que recebe um texto sobre como você está se sentindo e retorna recomendações de filmes alinhadas ao seu humor. A interpretação é feita com LLM, e os resultados são validados com dados reais da API do TMDB. O foco foi estruturar como um projeto de produção: separação clara de responsabilidades, centralização de configurações, tratamento consistente de erros e integração real entre serviços externos.",
-                  tags: ["LLM", "API externa", "Engenharia de Prompt", "Tratamento de erros"],
-                  link: "https://github.com/giovannadequi4/cinemood"
-                }
+                  description:
+                    "Recomendador de filmes baseado em humor, com LLM e validação via TMDB. Projeto focado em arquitetura limpa, integração de APIs e tratamento de erros.",
+                  tags: [
+                    "Node.js",
+                    "API Integration",
+                    "Prompt Engineering",
+                    "Error Handling",
+                  ],
+                  link: "https://github.com/giovannadequi4/cinemood",
+                  demo: "https://cinemood-ai.vercel.app",
+                },
                 {
                   title: "Take-Home Test",
-                  description: "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
-                  tags: ["React", "Java", "Spring Security", "JWT", "Argon2"], 
+                  description:
+                    "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
+                  tags: ["React", "Java", "Spring Security", "JWT", "Argon2"],
                   gradient: "from-emerald-500/20 to-pink-500/20",
-                  link: "https://github.com/giovannadequi4/login-spring-react"
+                  link: "https://github.com/giovannadequi4/login-spring-react",
                 },
                 {
                   title: "Sales Sync",
-                  description: "Sistema desenvolvido para administração de vendas e controle de estoque, utilizado por uma loja real.",
+                  description:
+                    "Sistema desenvolvido para administração de vendas e controle de estoque, utilizado por uma loja real.",
                   tags: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
                   gradient: "from-emerald-500/20 to-emerald-600/20",
-                  link: "https://github.com/giovannadequi4/sales-sync-project"
+                  link: "https://github.com/giovannadequi4/sales-sync-project",
                 },
-                {
-                  title: "Real Estate Platform",
-                  description: "Sistema web desenvolvido para gerenciamento de imóveis com interface intuitiva e responsiva, funcionalidades robustas e autenticação de usuários. ",
-                  tags: ["PHP", "JavaScript", "Bootstrap", "MySQL"],
-                  gradient: "from-pink-500/20 to-pink-600/20",
-                  link: "https://github.com/giovannadequi4/real-estate-project"
-                },
-
               ].map((project, index) => (
                 <div
                   key={index}
                   className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift gloss-highlight"
                 >
-                  <div
+                  {/* <div
                     className={`w-full h-32 md:h-40 rounded-lg md:rounded-xl bg-gradient-to-br ${project.gradient} mb-4 md:mb-6 flex items-center justify-center`}
                   >
                     <BriefcaseIcon />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{project.title}</h3>
-                  <p className="text-sm md:text-base text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                  </div> */}
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-400 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
@@ -331,11 +376,20 @@ function App() {
                     </button> */}
                     <button
                       className="text-sm flex items-center gap-1.5 text-pink-400 hover:text-pink-300 transition-colors font-medium"
-                      onClick={() => window.open(project.link, '_blank')}
-                    >  
+                      onClick={() => window.open(project.link, "_blank")}
+                    >
                       <GithubIcon />
-                      Ver mais
+                      GitHub
                     </button>
+                    {project.demo && (
+                      <button
+                        className="text-sm flex items-center gap-1.5 text-pink-400 hover:text-pink-300 transition-colors font-medium"
+                        onClick={() => window.open(project.demo, "_blank")}
+                      >
+                        <CodeIcon />
+                        Demo
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
@@ -350,30 +404,35 @@ function App() {
               <div className="p-2 md:p-3 bg-pink-500/20 rounded-lg md:rounded-xl">
                 <BriefcaseIcon />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">Experiência</h2>
+              <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">
+                Experiência
+              </h2>
             </div>
 
             <div className="space-y-6 md:space-y-8">
               {[
                 {
-                  role: "Desenvolvedora Java/C# + React",
+                  role: "Desenvolvedora Java + React",
                   company: "Duett Software",
                   period: "08/2025 - Presente",
-                  description: "Atuação como desenvolvedora de software em projetos corporativos, envolvendo migração de sistema legado em Java e o desenvolvimento de novos sistemas B2B e de gestão de inventários em C#, com foco em regras de negócio logísticas, manutenção e evolução de sistemas existentes, implementação de funcionalidades backend e colaboração em equipe.",
+                  description:
+                    "Atuação como desenvolvedora de software em projetos corporativos, envolvendo migração de sistema legado em Java e o desenvolvimento de novos sistemas B2B e de gestão de inventários em C#, com foco em regras de negócio logísticas, manutenção e evolução de sistemas existentes, implementação de funcionalidades backend e colaboração em equipe.",
                   color: "emerald",
                 },
                 {
                   role: "Desenvolvedora Java + React",
                   company: "IFSul",
                   period: "2024 - 2025",
-                  description: " Desenvolvimento de sistema de análise de qualidade de máquinas, com React.js no frontend (prototipado e implementado) integrado a APIs REST em Java/Spring. Implementação de gráficos interativos e atualização em tempo real via MQTT. Utilização de práticas ágeis e Docker para otimização do ambiente.",
+                  description:
+                    " Desenvolvimento de sistema de análise de qualidade de máquinas, com React.js no frontend (prototipado e implementado) integrado a APIs REST em Java/Spring. Implementação de gráficos interativos e atualização em tempo real via MQTT. Utilização de práticas ágeis e Docker para otimização do ambiente.",
                   color: "pink",
                 },
                 {
                   role: "Desenvolvedora PHP",
                   company: "Salutaris",
                   period: "2024 - 2025",
-                  description: "Desenvolvimento de sistemas para gestão de operadoras de saúde em PHP e JavaScript. Geração de relatórios, otimização de consultas SQL complexas e gerenciamento de banco de dados relacional. Atendimento a demandas via tickets, garantindo entregas ágeis e de qualidade.",
+                  description:
+                    "Desenvolvimento de sistemas para gestão de operadoras de saúde em PHP e JavaScript. Geração de relatórios, otimização de consultas SQL complexas e gerenciamento de banco de dados relacional. Atendimento a demandas via tickets, garantindo entregas ágeis e de qualidade.",
                   color: "emerald",
                 },
               ].map((exp, index) => (
@@ -385,13 +444,21 @@ function App() {
                     className={`absolute left-0 top-8 md:top-10 w-3 h-3 rounded-full bg-${exp.color}-500 shadow-lg shadow-${exp.color}-500/50`}
                   />
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 md:mb-4">
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-0">{exp.role}</h3>
-                    <span className="text-xs md:text-sm text-gray-400">{exp.period}</span>
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-0">
+                      {exp.role}
+                    </h3>
+                    <span className="text-xs md:text-sm text-gray-400">
+                      {exp.period}
+                    </span>
                   </div>
-                  <p className={`text-sm md:text-base font-semibold text-${exp.color}-400 mb-2 md:mb-3`}>
+                  <p
+                    className={`text-sm md:text-base font-semibold text-${exp.color}-400 mb-2 md:mb-3`}
+                  >
                     {exp.company}
                   </p>
-                  <p className="text-sm md:text-base text-gray-400 leading-relaxed">{exp.description}</p>
+                  <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+                    {exp.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -406,7 +473,9 @@ function App() {
                 <div className="p-2 md:p-3 bg-emerald-500/20 rounded-lg md:rounded-xl">
                   <MailIcon />
                 </div>
-                <h2 className="text-2xl md:text-4xl font-bold gradient-text">Vamos Conversar?</h2>
+                <h2 className="text-2xl md:text-4xl font-bold gradient-text">
+                  Vamos Conversar?
+                </h2>
               </div>
 
               <p className="text-base md:text-lg text-gray-400 mb-8 md:mb-12 leading-relaxed">
@@ -433,14 +502,16 @@ function App() {
               </div>
 
               <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10">
-                <p className="text-xs md:text-sm text-gray-500">© 2025 - Todos os direitos reservados</p>
+                <p className="text-xs md:text-sm text-gray-500">
+                  © 2025 - Todos os direitos reservados
+                </p>
               </div>
             </div>
           </div>
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
