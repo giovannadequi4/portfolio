@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslation } from "./i18n";
 import {
   CodeIcon,
   UserIcon,
@@ -11,9 +12,28 @@ import {
   ExternalLinkIcon,
   SparklesIcon,
 } from "./components/Icons";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
+  const { t } = useTranslation();
+  const navLabels = t("nav", { returnObjects: true });
+  const hero = t("hero", { returnObjects: true });
+  const about = t("about", { returnObjects: true });
+  const skills = t("skills", { returnObjects: true });
+  const projects = t("projects", { returnObjects: true });
+  const experience = t("experience", { returnObjects: true });
+  const contact = t("contact", { returnObjects: true });
+  const projectsTitle = t("projectsTitle");
+  const experienceTitle = t("experienceTitle");
+  const navOrder = [
+    "hero",
+    "about",
+    "skills",
+    "projects",
+    "experience",
+    "contact",
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -55,43 +75,17 @@ function App() {
       <div className="relative z-10">
         {/* Navigation - mobile-first */}
         <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in w-[90%] max-w-2xl">
-          <div className="glass rounded-full px-3 py-2 md:px-6 md:py-3 flex items-center justify-between md:justify-center gap-2 md:gap-6 overflow-x-auto">
-            <a
-              href="#hero"
-              className="text-xs md:text-sm font-medium hover:text-emerald-400 transition-colors whitespace-nowrap"
-            >
-              Início
-            </a>
-            <a
-              href="#about"
-              className="text-xs md:text-sm font-medium hover:text-emerald-400 transition-colors whitespace-nowrap"
-            >
-              Sobre
-            </a>
-            <a
-              href="#skills"
-              className="text-xs md:text-sm font-medium hover:text-pink-400 transition-colors whitespace-nowrap"
-            >
-              Skills
-            </a>
-            <a
-              href="#projects"
-              className="text-xs md:text-sm font-medium hover:text-emerald-400 transition-colors whitespace-nowrap"
-            >
-              Projetos
-            </a>
-            <a
-              href="#experience"
-              className="text-xs md:text-sm font-medium hover:text-pink-400 transition-colors whitespace-nowrap"
-            >
-              Experiência
-            </a>
-            <a
-              href="#contact"
-              className="text-xs md:text-sm font-medium hover:text-emerald-400 transition-colors whitespace-nowrap"
-            >
-              Contato
-            </a>
+          <div className="glass rounded-full px-3 py-2 md:px-6 md:py-3 flex items-center gap-2 md:gap-6 overflow-x-auto">
+            {navOrder.map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className="text-xs md:text-sm font-medium hover:text-emerald-400 transition-colors whitespace-nowrap"
+              >
+                {navLabels[section]}
+              </a>
+            ))}
+            <LanguageSwitcher />
           </div>
         </nav>
 
@@ -101,17 +95,17 @@ function App() {
           className="min-h-screen flex items-center justify-center px-4 md:px-6"
         >
           <div className="max-w-5xl mx-auto text-center">
-            <div
+            {/* <div
               className="animate-fade-in-up"
               style={{ animationDelay: "0.2s", opacity: 0 }}
             >
               <div className="inline-flex items-center gap-2 glass rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-6 md:mb-8">
                 <SparklesIcon />
                 <span className="text-xs md:text-sm font-medium gradient-text">
-                  Disponível para novos projetos
+                  {hero.announcement}
                 </span>
               </div>
-            </div>
+            </div> */}
 
             <h1
               className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 animate-fade-in-up leading-tight"
@@ -123,10 +117,16 @@ function App() {
             </h1>
 
             <p
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-4 md:mb-5 max-w-2xl mx-auto animate-fade-in-up px-4"
               style={{ animationDelay: "0.6s", opacity: 0 }}
             >
-              Desenvolvedora Full-Stack Java e React
+              {hero.role}
+            </p>
+            <p
+              className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in-up px-4"
+              style={{ animationDelay: "0.6s", opacity: 0 }}
+            >
+              {hero.description}
             </p>
 
             <div
@@ -137,7 +137,7 @@ function App() {
                 href="#projects"
                 className="btn-gradient px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-white flex items-center gap-2 text-sm md:text-base w-full sm:w-auto justify-center"
               >
-                Ver Projetos
+                {hero.ctaProjects}
                 <ExternalLinkIcon />
               </a>
               <a
@@ -145,7 +145,7 @@ function App() {
                 className="btn-gradient-pink px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-white flex items-center gap-2 text-sm md:text-base w-full sm:w-auto justify-center"
               >
                 <MailIcon />
-                Contato
+                {hero.ctaContact}
               </a>
             </div>
 
@@ -182,49 +182,40 @@ function App() {
                   <UserIcon />
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold gradient-text">
-                  Sobre Mim
+                  {about.title}
                 </h2>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
-                  <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6">
-                    Desenvolvedora Full-Stack com formação técnica e nível
-                    superior em andamento, com experiência em empresas e
-                    projetos independentes.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    Com foco em backend (Java + Spring), atuando na construção
-                    de sistemas robustos, integração de APIs e aplicações
-                    orientadas a dados.
-                  </p>
+                  {about.paragraphs.map((paragraph, index) => (
+                    <p
+                      key={`${paragraph}-${index}`}
+                      className="text-base md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-6 last:mb-0"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
 
                 <div className="space-y-3 md:space-y-4">
-                  <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
-                      🎓 Formação
-                    </h3>
-                    <p className="text-gray-400 text-sm md:text-base">
-                      Técnico + Ensino Superior em andamento
-                    </p>
-                  </div>
-                  <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-pink-400 mb-1 md:mb-2 text-sm md:text-base">
-                      💼 Experiência
-                    </h3>
-                    <p className="text-gray-400 text-sm md:text-base">
-                      Desenvolvedora full stack + Projetos robustos
-                    </p>
-                  </div>
-                  {/* <div className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight">
-                    <h3 className="font-semibold text-emerald-400 mb-1 md:mb-2 text-sm md:text-base">
-                      🎨 Foco
-                    </h3>
-                    <p className="text-gray-400 text-sm md:text-base">
-                      Design e arquitetura de software
-                    </p>
-                  </div> */}
+                  {about.highlights.map((highlight, index) => (
+                    <div
+                      key={highlight.title}
+                      className="glass rounded-lg md:rounded-xl p-3 md:p-4 hover-glow gloss-highlight"
+                    >
+                      <h3
+                        className={`font-semibold text-${
+                          index % 2 === 0 ? "emerald" : "pink"
+                        }-400 mb-1 md:mb-2 text-sm md:text-base`}
+                      >
+                        {highlight.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm md:text-base">
+                        {highlight.text}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -239,64 +230,33 @@ function App() {
                 <CodeIcon />
               </div>
               <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">
-                Skills & Tecnologias
+                {skills.title}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
-              <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">
-                  Frontend
-                </h3>
-                <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["React", "TypeScript", "HTML/CSS", "JavaScript"].map(
-                    (skill) => (
+              {skills.categories.map((category) => (
+                <div
+                  key={category.title}
+                  className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift"
+                >
+                  <h3
+                    className={`text-xl md:text-2xl font-bold text-${category.textColor}-400 mb-4 md:mb-6`}
+                  >
+                    {category.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 md:gap-3">
+                    {category.items.map((skill) => (
                       <span
                         key={skill}
-                        className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
+                        className={`${category.badgeClass} px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight`}
                       >
                         {skill}
                       </span>
-                    )
-                  )}
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-pink-400 mb-4 md:mb-6">
-                  Backend
-                </h3>
-                <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["Java", "Spring Framework", "SQL", "REST APIs"].map(
-                    (skill) => (
-                      <span
-                        key={skill}
-                        className="skill-badge-pink px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
-                      >
-                        {skill}
-                      </span>
-                    )
-                  )}
-                </div>
-              </div>
-
-              <div className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-4 md:mb-6">
-                  Ferramentas
-                </h3>
-                <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["MQTT", "Git", "RabbitMQ", "Docker", "Figma", "Scrum"].map(
-                    (skill) => (
-                      <span
-                        key={skill}
-                        className="skill-badge px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium gloss-highlight"
-                      >
-                        {skill}
-                      </span>
-                    )
-                  )}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -309,44 +269,14 @@ function App() {
                 <BriefcaseIcon />
               </div>
               <h2 className="text-2xl md:text-4xl font-bold gradient-text">
-                Projetos em Destaque
+                {projectsTitle}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4 md:gap-8">
-              {[
-                {
-                  title: "CineMood AI",
-                  description:
-                    "Recomendador de filmes baseado em humor, com LLM e validação via TMDB. Projeto focado em arquitetura limpa, integração de APIs e tratamento de erros.",
-                  tags: [
-                    "Node.js",
-                    "API Integration",
-                    "Prompt Engineering",
-                    "Error Handling",
-                  ],
-                  link: "https://github.com/giovannadequi4/cinemood",
-                  demo: "https://cinemood-ai.vercel.app",
-                },
-                {
-                  title: "Take-Home Test",
-                  description:
-                    "Sistema web completo de autenticação com funcionalidades de cadastro, login, gerenciamento de usuários e troca de senha.",
-                  tags: ["React", "Java", "Spring Security", "JWT", "Argon2"],
-                  gradient: "from-emerald-500/20 to-pink-500/20",
-                  link: "https://github.com/giovannadequi4/login-spring-react",
-                },
-                {
-                  title: "Sales Sync",
-                  description:
-                    "Sistema desenvolvido para administração de vendas e controle de estoque, utilizado por uma loja real.",
-                  tags: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
-                  gradient: "from-emerald-500/20 to-emerald-600/20",
-                  link: "https://github.com/giovannadequi4/sales-sync-project",
-                },
-              ].map((project, index) => (
+              {projects.map((project) => (
                 <div
-                  key={index}
+                  key={project.title}
                   className="glass-strong rounded-xl md:rounded-2xl p-6 md:p-8 hover-lift gloss-highlight"
                 >
                   {/* <div
@@ -406,39 +336,14 @@ function App() {
                 <BriefcaseIcon />
               </div>
               <h2 className="text-2xl md:text-4xl font-bold gradient-text-pink">
-                Experiência
+                {experienceTitle}
               </h2>
             </div>
 
             <div className="space-y-6 md:space-y-8">
-              {[
-                {
-                  role: "Desenvolvedora Java + React",
-                  company: "Duett Software",
-                  period: "08/2025 - Presente",
-                  description:
-                    "Atuação como desenvolvedora de software em projetos corporativos, envolvendo migração de sistema legado em Java e o desenvolvimento de novos sistemas B2B e de gestão de inventários em C#, com foco em regras de negócio logísticas, manutenção e evolução de sistemas existentes, implementação de funcionalidades backend e colaboração em equipe.",
-                  color: "emerald",
-                },
-                {
-                  role: "Desenvolvedora Java + React",
-                  company: "IFSul",
-                  period: "2024 - 2025",
-                  description:
-                    " Desenvolvimento de sistema de análise de qualidade de máquinas, com React.js no frontend (prototipado e implementado) integrado a APIs REST em Java/Spring. Implementação de gráficos interativos e atualização em tempo real via MQTT. Utilização de práticas ágeis e Docker para otimização do ambiente.",
-                  color: "pink",
-                },
-                {
-                  role: "Desenvolvedora PHP",
-                  company: "Salutaris",
-                  period: "2024 - 2025",
-                  description:
-                    "Desenvolvimento de sistemas para gestão de operadoras de saúde em PHP e JavaScript. Geração de relatórios, otimização de consultas SQL complexas e gerenciamento de banco de dados relacional. Atendimento a demandas via tickets, garantindo entregas ágeis e de qualidade.",
-                  color: "emerald",
-                },
-              ].map((exp, index) => (
+              {experience.map((exp) => (
                 <div
-                  key={index}
+                  key={`${exp.role}-${exp.company}`}
                   className="rounded-xl md:rounded-2xl p-6 md:p-8 relative pl-8 md:pl-12 timeline-item"
                 >
                   <div
@@ -475,12 +380,12 @@ function App() {
                   <MailIcon />
                 </div>
                 <h2 className="text-2xl md:text-4xl font-bold gradient-text">
-                  Vamos Conversar?
+                  {contact.title}
                 </h2>
               </div>
 
               <p className="text-base md:text-lg text-gray-400 mb-8 md:mb-12 leading-relaxed">
-                Entre em contato!
+                {contact.subtitle}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
@@ -489,7 +394,7 @@ function App() {
                   className="btn-gradient px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-white flex items-center gap-2 justify-center text-sm md:text-base"
                 >
                   <MailIcon />
-                  Enviar Email
+                  {contact.email}
                 </a>
                 <a
                   href="https://linkedin.com/in/giovanna-dequi"
@@ -498,13 +403,13 @@ function App() {
                   className="btn-gradient-pink px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-white flex items-center gap-2 justify-center text-sm md:text-base"
                 >
                   <LinkedinIcon />
-                  LinkedIn
+                  {contact.linkedin}
                 </a>
               </div>
 
               <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/10">
                 <p className="text-xs md:text-sm text-gray-500">
-                  © 2025 - Todos os direitos reservados
+                  {contact.footer}
                 </p>
               </div>
             </div>

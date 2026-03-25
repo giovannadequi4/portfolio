@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "hero": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "announcement": "Open for new projects",
+    "role": "Full-Stack Java & React Developer",
+    "description": "Developer focused on reliable systems, API integration, and data-driven applications.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "Full-Stack developer with technical training and ongoing higher education, experienced in companies and independent projects.",
+      "Focused on backend work (Java + Spring), building robust systems, integrating APIs, and delivering data-driven applications."
+    ],
+    "highlights": [
+      {
+        "title": "🎓 Education",
+        "text": "Technical course + ongoing higher education"
+      },
+      {
+        "title": "💼 Experience",
+        "text": "Full-stack developer with solid projects"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "categories": [
+      {
+        "title": "Frontend",
+        "badgeClass": "skill-badge",
+        "textColor": "emerald",
+        "items": ["React", "TypeScript", "HTML/CSS", "JavaScript"]
+      },
+      {
+        "title": "Backend",
+        "badgeClass": "skill-badge-pink",
+        "textColor": "pink",
+        "items": ["Java", "Spring Framework", "SQL", "REST APIs"]
+      },
+      {
+        "title": "Tools",
+        "badgeClass": "skill-badge",
+        "textColor": "emerald",
+        "items": ["MQTT", "Git", "RabbitMQ", "Docker", "Figma", "Scrum"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "CineMood AI",
+      "description": "Mood-based movie recommender using LLMs validated against TMDB. The project highlights clean architecture, API integration, and resilient error handling.",
+      "tags": ["Node.js", "API Integration", "Prompt Engineering", "Error Handling"],
+      "link": "https://github.com/giovannadequi4/cinemood",
+      "demo": "https://cinemood-ai.vercel.app"
+    },
+    {
+      "title": "Take-Home Test",
+      "description": "Full authentication system with signup, login, user management, and password reset flows.",
+      "tags": ["React", "Java", "Spring Security", "JWT", "Argon2"],
+      "gradient": "from-emerald-500/20 to-pink-500/20",
+      "link": "https://github.com/giovannadequi4/login-spring-react"
+    },
+    {
+      "title": "Sales Sync",
+      "description": "Web solution for sales administration and stock control, already used in a real store.",
+      "tags": ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
+      "gradient": "from-emerald-500/20 to-emerald-600/20",
+      "link": "https://github.com/giovannadequi4/sales-sync-project"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Java + React Developer",
+      "company": "Duett Software",
+      "period": "08/2025 - Present",
+      "description": "Working on corporate software initiatives, migrating legacy Java systems, and delivering new B2B and inventory management solutions in C#, emphasizing logistics business rules, maintenance/evolution, backend features, and collaborative delivery.",
+      "color": "emerald"
+    },
+    {
+      "role": "Java + React Developer",
+      "company": "IFSul",
+      "period": "2024 - 2025",
+      "description": "Built a machine quality analysis platform with React.js (from prototype to implementation) integrated to Java/Spring REST APIs. Implemented interactive charts and MQTT-driven real-time updates while applying agile practices and Docker to stabilize the environment.",
+      "color": "pink"
+    },
+    {
+      "role": "PHP Developer",
+      "company": "Salutaris",
+      "period": "2024 - 2025",
+      "description": "Delivered solutions for healthcare operators using PHP and JavaScript, generating reports, optimizing complex SQL queries, and managing relational data while responding to tickets for fast, quality releases.",
+      "color": "emerald"
+    }
+  ],
+  "experienceTitle": "Experience",
+  "projectsTitle": "Featured Projects",
+  "contact": {
+    "title": "Let's Talk?",
+    "subtitle": "Reach out!",
+    "email": "Send Email",
+    "linkedin": "LinkedIn",
+    "footer": "© 2025 - All rights reserved"
+  }
+}
